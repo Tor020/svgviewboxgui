@@ -97,8 +97,28 @@
 		</div>
 		<aside class="sidebar column">
 
-			<!-- <button class="guide-trigger">Guide</button> -->
-			<!--<script type="text/javascript" src="http://cdn.adpacks.com/adpacks.js?legacyid=1287837&zoneid=1386&key=13ef3eaa0a08baab445eed65885ebad2&serve=C6SI42Y&placement=wwwsarasoueidancom&circle=dev" id="_adpacks_js"></script>-->
+<!-- my additions -->
+
+<textarea name="" id="txtbx" cols="30" rows="10"></textarea>
+
+		<div class="controls column">
+			<fieldset>
+				<legend>viewBox</legend>
+				<div class="input">
+					<label for="#min-x">&lt;min-x&gt;</label> <input type="text" id="min-x" class="viewbox-option" value="0">
+				</div>
+				<div class="input">
+					<label for="#min-y">&lt;min-y&gt;</label> <input type="text" id="min-y" class="viewbox-option" value="0">
+				</div>
+				<label for="#viewBox-width">&lt;width&gt;</label>
+				<input type="range" id="viewbox-width" class="viewbox-option" min="100" value="400" max="1600" step="10"><output for="viewbox-width">400</output>
+				<label for="#viewbox-height">&lt;height&gt;</label>
+				<input type="range" id="viewbox-height" class="viewbox-option" min="100" value="300" max="1200" step="10" data-current-value="300"><output for="viewbox-height">300</output>
+			</fieldset>
+      
+<!-- <svg class="inner" width="800" height="600" viewBox="0 0 1220 650" preserveAspectRatio="xMidYMid meet"> -->
+
+
 		</aside>
 		
 	</div><!-- end wrapper -->
@@ -306,6 +326,6 @@ preserveAspectRatio = defer? &lt;align&gt; &lt;meetOrSlice&gt;?
 			</ul>
 		</div>
 	</section>
-
+<script src="scripts/SVGgui.js"></script>
 </body>
 </html>

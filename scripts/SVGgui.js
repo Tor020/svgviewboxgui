@@ -76,14 +76,25 @@ vbGuidelinesVisibility.onclick = function() {
   }
 }
 ;
-var vbMinX = document.getElementById("min-x")
-  , vbMinY = document.getElementById("min-y")
-  , vbWidth = document.getElementById("viewbox-width")
-  , vbHeight = document.getElementById("viewbox-height");
-var vbMinXvalue = vbMinX.value
-  , vbMinYvalue = vbMinY.value
-  , vbWidthValue = vbWidth.value
-  , vbHeightValue = vbHeight.value;
+
+
+  // var viewBoxValue = vbMinX.value + " " + vbMinY.value + " " + vbWidth.value + " " + vbHeight.value;
+  // innerSVG.setAttribute("viewBox", viewBoxValue)
+  // txtbx.innerhtml = viewBoxValue;
+/*  */
+
+var vbMinX = document.getElementById("min-x"),
+    vbMinY = document.getElementById("min-y"),
+    vbWidth = document.getElementById("viewbox-width"),
+    vbHeight = document.getElementById("viewbox-height");
+    txtbx = document.getElementById('txtbx');
+var vbMinXvalue = vbMinX.value,
+    vbMinYvalue = vbMinY.value,
+    vbWidthValue = vbWidth.value,
+    vbHeightValue = vbHeight.value;
+
+
+  /*  */
 vbMinX.addEventListener("blur", resetInput, false);
 vbMinY.addEventListener("blur", resetInput, false);
 function resetInput() {
@@ -150,6 +161,7 @@ function drawXandYLines() {
 }
 function updateRangeOutput(self) {
   self.nextSibling.textContent = self.value
+
 }
 function updateRulers() {
   var labels = innerSVG.querySelector(".labels");
@@ -159,4 +171,5 @@ function updateRulers() {
 function setViewboxAttributeValue() {
   var viewBoxValue = vbMinX.value + " " + vbMinY.value + " " + vbWidth.value + " " + vbHeight.value;
   innerSVG.setAttribute("viewBox", viewBoxValue)
+  txtbx.value = viewBoxValue;
 }
